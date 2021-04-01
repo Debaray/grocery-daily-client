@@ -1,0 +1,21 @@
+.sidebar {
+    background-color: #203D37;
+    height: 500px;
+  }
+  .sidebar-item {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+  }
+  .sidebar-item:hover{
+    text-decoration: none;
+    color: white;
+    transform:scale(1.1);
+    transition: transform 1s;
+  }
+  @media screen and (max-width: 900px) {
+    .sidebar {
+      height: auto;
+    }
+  }
