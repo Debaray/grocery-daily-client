@@ -23,7 +23,7 @@ const Admin = () => {
 
                     <div className="col-sm-12 col-md-9 col-lg-9">
                         <Switch>
-                           
+
                             <PrivateRoute path="/admin/manageProducts">
                                 <ManageProducts />
                             </PrivateRoute>
@@ -31,7 +31,7 @@ const Admin = () => {
                                 <AddProduct />
                             </PrivateRoute>
                             <PrivateRoute path="/admin">
-                            <ManageProducts />
+                                <ManageProducts />
                             </PrivateRoute>
                         </Switch>
                     </div>

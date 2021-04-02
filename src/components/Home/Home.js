@@ -9,7 +9,7 @@ import './Home.css';
 import Spinner from '../Spinner/Spinner';
 const Home = () => {
     const [products, setProducts] = useState([]);
-    const [showSpin,setShowSpin] = useState(false);
+    const [showSpin, setShowSpin] = useState(false);
     const history = useHistory();
     useEffect(() => {
         fetch('https://still-caverns-41542.herokuapp.com/products')
@@ -24,7 +24,7 @@ const Home = () => {
     }
     return (
         <div className="container">
-           {!showSpin && <Spinner></Spinner>} 
+            {!showSpin && <Spinner></Spinner>}
             <div className="row">
                 {
                     products.map(product => <Product key={product._id} product={product} redirectCheckOut={redirectCheckOut}></Product>)

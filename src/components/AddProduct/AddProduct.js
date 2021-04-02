@@ -52,38 +52,38 @@ const AddProduct = () => {
     return (
         <div>
             {!showSpin && <div><Spinner></Spinner><p className="text-center">Please Wait.! Image Uploading...</p></div>}
-             <div>
-                    <h2>Add Product</h2>
-                    <form className="mt-3 form-style">
-                        <div className="row">
-                            <label htmlFor="productName" className="col-sm-12 col-md-6 col-lg-6">
-                                Product Name
+            <div>
+                <h2>Add Product</h2>
+                <form className="mt-3 form-style">
+                    <div className="row">
+                        <label htmlFor="productName" className="col-sm-12 col-md-6 col-lg-6">
+                            Product Name
                                 <hr></hr>
-                                <input className="col-sm-12 col-md-10 col-lg-10" name="productName" placeholder="e.x- milk,chips,egg" type="text" onChange={handleProductPropertyChange} />
-                            </label>
-                            <label className="col-sm-12 col-md-6 col-lg-6">
-                                Weight
+                            <input className="col-sm-12 col-md-10 col-lg-10" name="productName" placeholder="e.x- milk,chips,egg" type="text" onChange={handleProductPropertyChange} />
+                        </label>
+                        <label className="col-sm-12 col-md-6 col-lg-6">
+                            Weight
                              <hr></hr>
-                                <input className="col-sm-12 col-md-10 col-lg-10" name="productWight" placeholder="e.x- 1kg" type="text" onChange={handleProductPropertyChange} />
-                            </label>
-                        </div>
-                        <div className="row mt-2">
-                            <label className="col-sm-12 col-md-6 col-lg-6">
-                                Add Price
+                            <input className="col-sm-12 col-md-10 col-lg-10" name="productWight" placeholder="e.x- 1kg" type="text" onChange={handleProductPropertyChange} />
+                        </label>
+                    </div>
+                    <div className="row mt-2">
+                        <label className="col-sm-12 col-md-6 col-lg-6">
+                            Add Price
                                 <hr></hr>
-                                <input className="col-sm-12 col-md-10 col-lg-10" name="productPrice" placeholder="e.x- 10$" type="number" onChange={handleProductPropertyChange} />
-                            </label>
-                            <label className="col-sm-12 col-md-6 col-lg-6">
-                                Add Photo
+                            <input className="col-sm-12 col-md-10 col-lg-10" name="productPrice" placeholder="e.x- 10$" type="number" onChange={handleProductPropertyChange} />
+                        </label>
+                        <label className="col-sm-12 col-md-6 col-lg-6">
+                            Add Photo
                              <hr></hr>
-                                <input className="col-sm-12 col-md-10 col-lg-10" type="file" onChange={handleProductImageChange} />
-                                 </label>
-                        </div>
-                        <br />
-                        <Button variant="success" as="input" type="reset" value="Save" block onClick={handleSubmit} />
-                    </form>
-                </div>
-            
+                            <input className="col-sm-12 col-md-10 col-lg-10" type="file" onChange={handleProductImageChange} />
+                        </label>
+                    </div>
+                    <br />
+                    <Button variant="success" as="input" type="reset" value="Save" block onClick={handleSubmit} />
+                </form>
+            </div>
+
         </div>
     );
 };

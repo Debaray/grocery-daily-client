@@ -24,7 +24,7 @@ const ManageProducts = () => {
                 console.log('delete done');
             })
             .catch(err => { console.log(err) })
-            setShowSpin(false)
+        setShowSpin(false)
     }
     return (
         <div>
