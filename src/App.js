@@ -15,6 +15,7 @@ import Deals from './components/Deals/Deals';
 import CheckOut from './components/CheckOut/CheckOut';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
+import Spinner from './components/Spinner/Spinner';
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -41,6 +42,9 @@ function App() {
           </PrivateRoute>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route path="/spinner">
+            <Spinner />
           </Route>
           <Route exact path="/">
             <Home />

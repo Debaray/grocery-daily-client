@@ -15,7 +15,6 @@ const CheckOut = () => {
 
     const checkoutProducts =() =>{
         const orderDetails ={...loggedInUser, products: checkoutProduct, orderTime: new Date()};
-        console.log(orderDetails);
         fetch('https://still-caverns-41542.herokuapp.com/addOrder',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
