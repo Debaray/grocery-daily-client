@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag} from '@fortawesome/free-solid-svg-icons';
 const Product = ({ product }) => {
     return (
-        <Card className="col-sm-12 col-md-6 col-lg-3 mt-3" >
+        <Card style={{ width: '18rem',height: '25rem'}} className="col-sm-12 col-md-6 col-lg-3 mt-3" >
             <Card.Img variant="top" src={product.imageUrl}/>
             <Card.Body>
                 <Card.Title>{product.productName} {product.productWight}</Card.Title>

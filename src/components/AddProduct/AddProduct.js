@@ -22,8 +22,8 @@ const AddProduct = () => {
             },
             body: JSON.stringify(productData)
         })
-            .then(res => console.log('server side response', res))
-        e.preventDefault();
+        .then(res => console.log('server side response', res))
+        
     }
     const handleProductImageChange = event => {
         console.log(event.target.files[0]);
@@ -76,7 +76,7 @@ const AddProduct = () => {
                     </label>
                 </div>
                 <br />
-                <Button variant="success" as="input" type="submit" value="Save" block onClick={handleSubmit} />
+                <Button variant="success" as="input" type="reset" value="Save" block onClick={handleSubmit} />
             </form>
         </div>
     );

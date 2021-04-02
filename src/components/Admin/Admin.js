@@ -30,7 +30,7 @@ const Admin = () => {
                                 <AddProduct />
                             </Route>
                             <Route path="/admin">
-                                <AddProduct />
+                            <ManageProducts />
                             </Route>
                         </Switch>
                     </div>
