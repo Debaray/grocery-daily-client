@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState ,useContext} from 'react';
 import { Table, Button } from 'react-bootstrap';
-import { useParams } from 'react-router';
-
+import { useHistory, useParams } from 'react-router';
+import { UserContext } from '../../App';
 const CheckOut = () => {
     const [checkoutProduct, setCheckoutProduct] = useState({});
     const {id} = useParams();
-
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const history = useHistory();
     useEffect(() => {
         fetch('https://still-caverns-41542.herokuapp.com/checkoutProduct/'+id)
             .then(res => res.json())
@@ -13,7 +14,7 @@ const CheckOut = () => {
     }, [id])
 
     const checkoutProducts =() =>{
-        const orderDetails ={products: checkoutProduct, orderTime: new Date()};
+        const orderDetails ={...loggedInUser, products: checkoutProduct, orderTime: new Date()};
         fetch('https://still-caverns-41542.herokuapp.com/addOrder',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -24,6 +25,8 @@ const CheckOut = () => {
             if(data)
             { 
                 alert('Checkout Successfully. Thanks For Shopping from Grocery Daily.');
+                setCheckoutProduct({});
+                history.replace('/');
             }
         })
         

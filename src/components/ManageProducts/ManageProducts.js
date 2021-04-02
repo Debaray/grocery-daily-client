@@ -5,7 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
-
+ 
     useEffect(() => {
         fetch('https://still-caverns-41542.herokuapp.com/products')
             .then(res => res.json())
@@ -15,10 +15,12 @@ const ManageProducts = () => {
         fetch(`https://still-caverns-41542.herokuapp.com/deleteProduct/${id}`,{
             method: 'DELETE'
         })
-        .then(res => res.json())
+        .then(res => console.log(res))
         .then(data => {
-           
-        })           
+           console.log('delete done');
+        })
+        .catch(err => {console.log(err)})    
+        
     }
     return (
         <div>

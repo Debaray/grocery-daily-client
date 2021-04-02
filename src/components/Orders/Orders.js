@@ -1,10 +1,12 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState ,useContext } from 'react';
 import { Table, Button } from 'react-bootstrap';
+import { UserContext } from '../../App';
 const Orders = () => {
     const [orders, setOrders] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch('https://still-caverns-41542.herokuapp.com/orders')
+        fetch('https://still-caverns-41542.herokuapp.com/orders?email='+loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
