@@ -4,7 +4,7 @@ import { Table, Button } from 'react-bootstrap';
 const Orders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5050/orders')
+        fetch('https://still-caverns-41542.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

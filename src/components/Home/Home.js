@@ -14,7 +14,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
  const history = useHistory();
     useEffect(() => {
-        fetch('http://localhost:5050/products')
+        fetch('https://still-caverns-41542.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

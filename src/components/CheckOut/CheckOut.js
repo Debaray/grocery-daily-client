@@ -7,14 +7,14 @@ const CheckOut = () => {
     const {id} = useParams();
 
     useEffect(() => {
-        fetch('http://localhost:5050/checkoutProduct/'+id)
+        fetch('https://still-caverns-41542.herokuapp.com/checkoutProduct/'+id)
             .then(res => res.json())
             .then(data => setCheckoutProduct(data))
     }, [id])
 
     const checkoutProducts =() =>{
         const orderDetails ={products: checkoutProduct, orderTime: new Date()};
-        fetch('http://localhost:5050/addOrder',{
+        fetch('https://still-caverns-41542.herokuapp.com/addOrder',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(orderDetails)

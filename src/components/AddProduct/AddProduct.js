@@ -13,7 +13,7 @@ const AddProduct = () => {
     });
     const handleSubmit = e => {
         console.log(productData);
-        const url = `http://localhost:5050/addProducts`;
+        const url = `https://still-caverns-41542.herokuapp.com/addProducts`;
 
         fetch(url, {
             method: 'POST',
