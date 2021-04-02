@@ -1,0 +1,12 @@
+.form-style{
+    border-radius: 15px;
+    background-color: rgba(245, 245, 245, 0.342);
+    padding: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.37);
+}
+.button-style{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    
+}
