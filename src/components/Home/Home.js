@@ -2,12 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Product from '../Product/Product';
-import CheckOut from '../CheckOut/CheckOut';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
     useHistory
 } from "react-router-dom";
 const Home = () => {
@@ -26,7 +21,7 @@ const Home = () => {
         <div className="container">
             <div className="row">
                 {
-                    products.map(product => <Product product={product} redirectCheckOut ={redirectCheckOut}></Product>)
+                    products.map(product => <Product key ={product._id}product={product} redirectCheckOut ={redirectCheckOut}></Product>)
                 }
             </div>
         </div>
