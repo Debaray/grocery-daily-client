@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTasks } from '@fortawesome/free-solid-svg-icons';
 import AddProduct from '../AddProduct/AddProduct';
 import ManageProducts from '../ManageProducts/ManageProducts';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 const Admin = () => {
     return (
         <Router>
@@ -23,15 +24,15 @@ const Admin = () => {
                     <div className="col-sm-12 col-md-9 col-lg-9">
                         <Switch>
                            
-                            <Route path="/admin/manageProducts">
+                            <PrivateRoute path="/admin/manageProducts">
                                 <ManageProducts />
-                            </Route>
-                            <Route path="/admin/addProduct">
+                            </PrivateRoute>
+                            <PrivateRoute path="/admin/addProduct">
                                 <AddProduct />
-                            </Route>
-                            <Route path="/admin">
+                            </PrivateRoute>
+                            <PrivateRoute path="/admin">
                             <ManageProducts />
-                            </Route>
+                            </PrivateRoute>
                         </Switch>
                     </div>
                 </div>

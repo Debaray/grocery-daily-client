@@ -1,4 +1,4 @@
-
+import React, { createContext, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
@@ -7,34 +7,38 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Orders from './components/Orders/Orders';
 import Admin from './components/Admin/Admin';
 import Login from './components/Login/Login';
 import Deals from './components/Deals/Deals';
 import CheckOut from './components/CheckOut/CheckOut';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <div className="container">
       <Router>
         <Header></Header>
         <Switch>
-          <Route path="/order">
+          <PrivateRoute path="/order">
             <Orders />
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin />
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/deals">
             <Deals />
           </Route>
-          <Route path="/checkout/:id">
+          <PrivateRoute path="/checkout/:id">
             <CheckOut />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/home">
             <Home />
           </Route>
@@ -44,6 +48,7 @@ function App() {
         </Switch>
       </Router>
     </div>
+    </UserContext.Provider>
   );
 }
 
