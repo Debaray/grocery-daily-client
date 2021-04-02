@@ -2,12 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import {   Redirect,
-    useHistory,
-    useLocation } from "react-router-dom";
 
 const ManageProducts = () => {
-    const history = useHistory();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {

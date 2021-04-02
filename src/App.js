@@ -13,6 +13,7 @@ import Orders from './components/Orders/Orders';
 import Admin from './components/Admin/Admin';
 import Login from './components/Login/Login';
 import Deals from './components/Deals/Deals';
+import CheckOut from './components/CheckOut/CheckOut';
 function App() {
   return (
     <div className="container">
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/deals">
             <Deals />
+          </Route>
+          <Route path="/checkout/:id">
+            <CheckOut />
           </Route>
           <Route exact path="/home">
             <Home />

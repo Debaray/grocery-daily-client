@@ -11,7 +11,7 @@ const Header = () => {
         <div>
             <>
                 <Navbar  className="mt-3" collapseOnSelect expand="lg" bg="light" variant="light">
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand className="header-style">Grocery Daily</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ml-auto align-items-lg-center">
