@@ -5,7 +5,7 @@
 
 .text-style:hover{
     text-decoration: none;
-    color: green;
+    color: #5c5cdb;
     transform:scale(1.1);
     transition: transform 1s;
 }
